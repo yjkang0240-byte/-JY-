@@ -1,32 +1,47 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
-function Notice() {
+const Notice = () => {
   return (
-    <div className="min-h-screen bg-[#f7fee7] flex flex-col">
-      <nav className="bg-white p-4 border-b border-[#2d5a27] flex items-center">
-        <Link to="/" className="text-[#2d5a27] font-bold mr-4">← 뒤로가기</Link>
-        <h1 className="text-xl font-black text-[#2d5a27]">공지사항</h1>
-      </nav>
+    <div className="p-6 bg-ivory min-h-screen flex flex-col items-center">
+      <div className="max-w-md w-full space-y-6 text-green-800">
+        
+        {/* 운영 시간 섹션 */}
+        <section>
+          <h2 className="text-xl font-bold flex items-center gap-2 mb-3">
+            <span className="text-purple-600">✔</span> 운영 시간
+          </h2>
+          <ul className="space-y-1 ml-4 list-disc list-inside">
+            <li>평일: 09:00 ~ 22:00</li>
+            <li>주말: 10:00 ~ 18:00</li>
+            {/* 새로 추가된 휴무일 정보 */}
+            <li className="font-semibold text-red-600">
+              정기 휴무일: '2째 주'와 '마지막 주' 일요일
+            </li>
+          </ul>
+        </section>
 
-      <main className="p-8 max-w-2xl mx-auto w-full">
-        <div className="space-y-4">
-          {/* 공지사항 목록 */}
-          <div className="bg-white p-6 rounded-2xl shadow-md border-l-8 border-[#2d5a27]">
-            <h2 className="text-lg font-bold text-gray-800">[안내] 결제 혜택 안내</h2>
-            <p className="text-gray-600 mt-2">서울페이 및 온누리 상품권 결제가 가능합니다. 이용권 구매 시 약 10%의 할인 효과를 누리세요!</p>
-            <span className="text-sm text-gray-400 mt-4 block">2025.12.26</span>
-          </div>
+        {/* 레슨 방식 섹션 */}
+        <section>
+          <h2 className="text-xl font-bold flex items-center gap-2 mb-1">
+            <span className="text-purple-600">✔</span> 레슨 방식: 1:1
+          </h2>
+        </section>
 
-          <div className="bg-white p-6 rounded-2xl shadow-md">
-            <h2 className="text-lg font-bold text-gray-800">[공지] 야외 퍼팅장 이용 수칙</h2>
-            <p className="text-gray-600 mt-2">안전한 이용을 위해 지정된 장소에서만 퍼팅 연습을 부탁드립니다.</p>
-            <span className="text-sm text-gray-400 mt-4 block">2025.12.20</span>
-          </div>
-        </div>
-      </main>
+        {/* 레슨 시간 섹션 */}
+        <section>
+          <h2 className="text-xl font-bold flex items-center gap-2 mb-2">
+            <span className="text-purple-600">✔</span> 레슨 시간: 20분
+          </h2>
+        </section>
+
+        {/* 예약 유의사항 */}
+        <p className="text-sm font-medium text-gray-700 mt-4 border-t pt-4">
+          ※ 예약은 전날 오후 23:00까지, 당일예약 불가
+        </p>
+        
+      </div>
     </div>
   );
-}
+};
 
 export default Notice;
