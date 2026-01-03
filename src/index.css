@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 최소한의 안정화 CSS */
+body {
+  margin: 0;
+}
+
